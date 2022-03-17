@@ -47,5 +47,5 @@ server {
 
 You can now use the following in your readme:
 
-```[![Spotify](http://92.119.90.17)](https://music.yandex.ru/users/Invisible-sleeper/albums)```
+```[![yandex](http://92.119.90.17)](https://music.yandex.ru/users/Invisible-sleeper/albums)```
 #

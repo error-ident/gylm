@@ -24,7 +24,7 @@ LIMIT= 10 | the number of results to fetch per page
 YANDEX_URL=https://music.yandex.ru/users/Invisible-sleeper/artists | YM profile url
 ```
 
-* Buuld for linux arch: GOOS=linux GOARCH=amd64 go build -o gylm
+* Build for linux arch: GOOS=linux GOARCH=amd64 go build -o gylm
 
 * Add gylm.conf to /etc/nginx/sites-available
 

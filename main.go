@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"image"
 	"image/jpeg"
+	"image/png"
 	"log"
 	"math/rand"
 	"net/http"
@@ -36,6 +37,9 @@ func init() {
 	if err := godotenv.Load(); err != nil {
 		log.Fatalf("No .env file found")
 	}
+
+	fmt.Println(png.UnsupportedError("init png"))
+	fmt.Println(jpeg.UnsupportedError("init jpg"))
 }
 
 func main() {
@@ -77,7 +81,7 @@ func main() {
 
 		imageData, err = trackImageToBase64(imageUrl)
 		if err != nil {
-			log.Fatalf("image64 error: %v, imageurl = %s", err, imageUrl)
+			log.Fatalf("image64 error: %v", err)
 		}
 
 		data := TrackData{
@@ -115,8 +119,9 @@ func trackImageToBase64(url string) (string, error) {
 	defer responseImage.Body.Close()
 	imageBody, _, err := image.Decode(responseImage.Body)
 	if err != nil {
-		log.Fatalf("image decode is failed")
+		log.Fatalf("image decode is failed, imageUrl: %s, %v", url, err)
 	}
+
 	buf := new(bytes.Buffer)
 	err = jpeg.Encode(buf, imageBody, nil)
 	if err != nil {

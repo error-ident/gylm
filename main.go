@@ -77,7 +77,7 @@ func main() {
 
 		imageData, err = trackImageToBase64(imageUrl)
 		if err != nil {
-			log.Fatalf("image64 error: %v", err)
+			log.Fatalf("image64 error: %v, imageurl = %s", err, imageUrl)
 		}
 
 		data := TrackData{

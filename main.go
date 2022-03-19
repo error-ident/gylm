@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"image"
 	"image/jpeg"
-	"image/png"
+	_ "image/png"
 	"log"
 	"math/rand"
 	"net/http"
@@ -37,9 +37,6 @@ func init() {
 	if err := godotenv.Load(); err != nil {
 		log.Fatalf("No .env file found")
 	}
-
-	fmt.Println(png.UnsupportedError("init png"))
-	fmt.Println(jpeg.UnsupportedError("init jpg"))
 }
 
 func main() {

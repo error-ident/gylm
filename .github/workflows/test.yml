@@ -34,13 +34,19 @@ jobs:
         go version
         go get golang.org/x/lint/golint
         
+    # Creating a .env file to avoid errors
+    - name: Create .env
+      run: touch .env
+
     # Run build of the application for Linux x86_64
-    - name: Run build for Linux x86_64
-      run: GOOS=linux GOARCH=amd64 go build -o gylm
+    - name: Run build for Linux x86_64 and run software
+      run: |
+        GOOS=linux GOARCH=amd64 go build -o gylm 
+        ./gylm & killall -15 gylm
 
     # Run build of the application for Linux x86
     - name: Run build for Linux x86
-      run: | 
+      run: |
         go clean -modcache
         GOOS=linux GOARCH=386 go build -o gylm
 

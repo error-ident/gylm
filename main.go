@@ -24,6 +24,7 @@ var (
 	imageData  string
 	userUrl    string
 	imageUrl   string
+	theme      string
 )
 
 type TrackData struct {
@@ -31,11 +32,18 @@ type TrackData struct {
 	ArtistName string
 	Image      string
 	UserUrl    string
+	ThemeName  string
 }
 
 func init() {
 	if err := godotenv.Load(); err != nil {
 		log.Fatalf("No .env file found")
+	}
+
+	if os.Getenv("THEME") == "" {
+		theme = "default"
+	} else {
+		theme = os.Getenv("THEME")
 	}
 }
 
@@ -47,7 +55,6 @@ func main() {
 	userUrl = os.Getenv("YANDEX_URL")
 
 	http.HandleFunc("/yandex", func(w http.ResponseWriter, r *http.Request) {
-
 		api := lastfm.New(key, secret)
 
 		result, err := api.User.GetRecentTracks(lastfm.P{"limit": limit,
@@ -78,7 +85,7 @@ func main() {
 
 		imageData, err = trackImageToBase64(imageUrl)
 		if err != nil {
-			log.Fatalf("image64 error: %v", err)
+			log.Printf("image64 error: %v", err)
 		}
 
 		data := TrackData{
@@ -86,6 +93,7 @@ func main() {
 			ArtistName: artistName,
 			Image:      imageData,
 			UserUrl:    userUrl,
+			ThemeName:  theme,
 		}
 
 		tmpl, err := template.ParseFiles("templates/index.html")
@@ -100,6 +108,11 @@ func main() {
 		}
 
 	})
+
+	http.HandleFunc("/themes/", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, r.URL.Path[1:])
+	})
+
 	//server log
 	err := http.ListenAndServe(":1984", nil)
 	if err != nil {
@@ -111,12 +124,12 @@ func main() {
 func trackImageToBase64(url string) (string, error) {
 	responseImage, err := http.Get(url)
 	if err != nil || responseImage.StatusCode != 200 {
-		log.Fatalf("image not found")
+		log.Printf("image not found")
 	}
 	defer responseImage.Body.Close()
 	imageBody, _, err := image.Decode(responseImage.Body)
 	if err != nil {
-		log.Fatalf("image decode is failed, imageUrl: %s, %v", url, err)
+		log.Printf("image decode is failed, imageUrl: %s, %v", url, err)
 	}
 
 	buf := new(bytes.Buffer)

@@ -109,9 +109,8 @@ func main() {
 
 	})
 
-	http.HandleFunc("/themes/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, r.URL.Path[1:])
-	})
+	fs := http.FileServer(http.Dir("./themes"))
+	http.Handle("/themes/", http.StripPrefix("/themes/", fs))
 
 	//server log
 	err := http.ListenAndServe(":1984", nil)

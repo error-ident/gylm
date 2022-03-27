@@ -1,7 +1,9 @@
 <svg width="480" height="133" xmlns="http://www.w3.org/2000/svg" class="svg">
-    <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="/themes/{{ .ThemeName }}.css" type="text/css"/>
     <foreignObject width="480" height="133">
         <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+            <style>
+                {{ .ThemeCss }}
+            </style>
             <div class="main">
                 <a class="art" href="{{ .UserUrl }}" target="_blank">
                         <img src="data:image/png;base64,{{ .Image }}" class="cover" />

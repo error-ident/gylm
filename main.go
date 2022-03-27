@@ -33,6 +33,7 @@ type TrackData struct {
 	Image      string
 	UserUrl    string
 	ThemeName  string
+	ThemeCss   string
 }
 
 func init() {
@@ -88,12 +89,22 @@ func main() {
 			log.Printf("image64 error: %v", err)
 		}
 
+		//TODO: Сделай сука шоб дата из файлов бросалась в темплейт, а то политика тебя нахуй шлет(
+
+		//get inline css
+		filepath := fmt.Sprintf("./themes/%s.css", theme)
+		themecss, err := os.ReadFile(filepath)
+		if err != nil {
+			fmt.Printf("read file error: %v", err)
+		}
+
 		data := TrackData{
 			TrackName:  trackName,
 			ArtistName: artistName,
 			Image:      imageData,
 			UserUrl:    userUrl,
 			ThemeName:  theme,
+			ThemeCss:   string(themecss),
 		}
 
 		tmpl, err := template.ParseFiles("templates/index.html")
@@ -108,9 +119,6 @@ func main() {
 		}
 
 	})
-
-	fs := http.FileServer(http.Dir("./themes"))
-	http.Handle("/themes/", http.StripPrefix("/themes/", fs))
 
 	//server log
 	err := http.ListenAndServe(":1984", nil)

@@ -49,7 +49,7 @@
     aspect-ratio:1/1;
     border-radius:5px;
 }
-#bars{
+.bars{
     display:flex;
     align-items:flex-end;
     width:100%;

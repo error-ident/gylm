@@ -12,68 +12,28 @@
                 <div class="content">
                     <div class="song">{{ .TrackName}}</div>
                     <div class="artist">{{ .ArtistName}}</div>
-                    <div id="bars">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
+                    <div class="bars"></div>
                 </div>
             </div>
         </div>
     </foreignObject>
+    <script type="text/javascript"><![CDATA[
+        let bars = document.querySelector(".bars");
+        for (let i = 0; i < 57; i++) {
+            bars.innerHTML += `<div class="bar" style="margin-right:1px;width:5px;transition: 0.3s;bottom:1px;min-height:3px;position:relative;"></div>`
+        }
+
+    let AudioFeed = function() {
+         setInterval(function() {
+             let bar = document.querySelectorAll(".bar");
+             bar.forEach(function(bar) {
+                 let barsHeight = 28
+                 let barHeight = Math.floor(Math.random() * barsHeight) + 3;
+                 bar.style.height = barHeight + 'px';
+             }, 100);
+        },)}
+
+    new AudioFeed()
+
+    ]]></script>
 </svg>

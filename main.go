@@ -73,13 +73,11 @@ func main() {
 				break
 			} else {
 				rand.Seed(time.Now().UnixNano())
-				track := result.Tracks[rand.Intn(len(result.Tracks))]
+				track = result.Tracks[rand.Intn(len(result.Tracks))]
 
 				trackName = track.Name
 				artistName = track.Artist.Name
 				imageUrl = track.Images[3].Url
-
-				fmt.Println(track.Artist.Name, track.Name)
 				break
 			}
 		}
@@ -89,11 +87,8 @@ func main() {
 			log.Printf("image64 error: %v", err)
 		}
 
-		//TODO: Сделай сука шоб дата из файлов бросалась в темплейт, а то политика тебя нахуй шлет(
-
-		//get inline css
 		filepath := fmt.Sprintf("./themes/%s.css", theme)
-		themecss, err := os.ReadFile(filepath)
+		themeCss, err := os.ReadFile(filepath)
 		if err != nil {
 			fmt.Printf("read file error: %v", err)
 		}
@@ -104,7 +99,7 @@ func main() {
 			Image:      imageData,
 			UserUrl:    userUrl,
 			ThemeName:  theme,
-			ThemeCss:   string(themecss),
+			ThemeCss:   string(themeCss),
 		}
 
 		tmpl, err := template.ParseFiles("templates/index.html")
@@ -120,7 +115,6 @@ func main() {
 
 	})
 
-	//server log
 	err := http.ListenAndServe(":1984", nil)
 	if err != nil {
 		fmt.Println("ListenAndServe: ", err)
@@ -132,8 +126,11 @@ func trackImageToBase64(url string) (string, error) {
 	responseImage, err := http.Get(url)
 	if err != nil || responseImage.StatusCode != 200 {
 		log.Printf("image not found")
+		defaultImage, _ := os.ReadFile("themes/noImage")
+		return string(defaultImage), nil
 	}
 	defer responseImage.Body.Close()
+
 	imageBody, _, err := image.Decode(responseImage.Body)
 	if err != nil {
 		log.Printf("image decode is failed, imageUrl: %s, %v", url, err)

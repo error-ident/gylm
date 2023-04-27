@@ -70,4 +70,266 @@
     height:3px;
     position:relative;
     background:#ff61dd;
+    animation: anima 15s ease infinite, sound 0ms -800ms ease-in infinite alternate;
+}
+
+div{
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji
+}
+
+.bar:nth-child(1) {
+    animation-duration: 15s, 1349ms;
+    animation-timing-function: ease, cubic-bezier(0.3270447296390498,0.0926018564684168,0.7256986456126547,0.7590016005481572);
+}
+.bar:nth-child(2) {
+    animation-duration: 15s, 707ms;
+    animation-timing-function: ease, cubic-bezier(0.21374602665658243,0.8439827219388005,0.95279911791141,1.5459127115821052);
+}
+.bar:nth-child(3) {
+    animation-duration: 15s, 1162ms;
+    animation-timing-function: ease, cubic-bezier(0.5244133314834348,0.6512585061727585,0.049268342409484064,0.7082678570140568);
+}
+.bar:nth-child(4) {
+    animation-duration: 15s, 801ms;
+    animation-timing-function: ease, cubic-bezier(0.6505212085915218,1.8121781828031118,0.4652373212557261,1.9640499378508411);
+}
+.bar:nth-child(5) {
+    animation-duration: 15s, 517ms;
+    animation-timing-function: ease, cubic-bezier(0.03955165962808506,0.8276123051249138,0.7119064232095325,0.9600517615598517);
+}
+.bar:nth-child(6) {
+    animation-duration: 15s, 1261ms;
+    animation-timing-function: ease, cubic-bezier(0.8981098270004627,0.015378692007941001,0.6729697945698057,0.07976839874803769);
+}
+.bar:nth-child(7) {
+    animation-duration: 15s, 1381ms;
+    animation-timing-function: ease, cubic-bezier(0.41987927985997636,0.1079800953962929,0.010940946294967622,1.2432982306999598);
+}
+.bar:nth-child(8) {
+    animation-duration: 15s, 1064ms;
+    animation-timing-function: ease, cubic-bezier(0.8047174924287481,0.3007576966910722,0.09958844517991239,0.08947595915740636);
+}
+.bar:nth-child(9) {
+    animation-duration: 15s, 631ms;
+    animation-timing-function: ease, cubic-bezier(0.05266799212639894,0.824068671434793,0.6442531267529367,0.42396976676668785);
+}
+.bar:nth-child(10) {
+    animation-duration: 15s, 887ms;
+    animation-timing-function: ease, cubic-bezier(0.126111623969799,1.289396763193647,0.7107182450447816,0.915446804006043);
+}
+.bar:nth-child(11) {
+    animation-duration: 15s, 717ms;
+    animation-timing-function: ease, cubic-bezier(0.29109285265145507,1.765986105509072,0.22369403931252102,1.0495277249596782);
+}
+.bar:nth-child(12) {
+    animation-duration: 15s, 710ms;
+    animation-timing-function: ease, cubic-bezier(0.6363647527627457,0.019220854433137476,0.7262489871636334,1.6198200071010147);
+}
+.bar:nth-child(13) {
+    animation-duration: 15s, 722ms;
+    animation-timing-function: ease, cubic-bezier(0.14101383444518165,0.5439383619347774,0.8893343002449993,1.1986755120680184);
+}
+.bar:nth-child(14) {
+    animation-duration: 15s, 1420ms;
+    animation-timing-function: ease, cubic-bezier(0.7504263936616075,0.8873518260354363,0.45948674291709896,1.7777893240415288);
+}
+.bar:nth-child(15) {
+    animation-duration: 15s, 915ms;
+    animation-timing-function: ease, cubic-bezier(0.586856554793473,0.11432118280049092,0.4788445646087174,1.4089819482518344);
+}
+.bar:nth-child(16) {
+    animation-duration: 15s, 1397ms;
+    animation-timing-function: ease, cubic-bezier(0.2888132990303877,0.19245566547455634,0.7169657938481193,1.6995450814518511);
+}
+.bar:nth-child(17) {
+    animation-duration: 15s, 981ms;
+    animation-timing-function: ease, cubic-bezier(0.038980221182021206,1.8906540500929103,0.8804744177050318,1.2284731910050288);
+}
+.bar:nth-child(18) {
+    animation-duration: 15s, 1029ms;
+    animation-timing-function: ease, cubic-bezier(0.5917580426210923,1.6531087111229028,0.8289115625882485,1.699528853939179);
+}
+.bar:nth-child(19) {
+    animation-duration: 15s, 981ms;
+    animation-timing-function: ease, cubic-bezier(0.5167082265988242,1.614600415888856,0.3580911760872463,1.320970875944683);
+}
+.bar:nth-child(20) {
+    animation-duration: 15s, 999ms;
+    animation-timing-function: ease, cubic-bezier(0.7300363410128314,1.0422344472134006,0.26121359442838926,1.836246728279778);
+}
+.bar:nth-child(21) {
+    animation-duration: 15s, 1361ms;
+    animation-timing-function: ease, cubic-bezier(0.17448255740410176,1.082922249412069,0.8334649823384485,1.0527802320789323);
+}
+.bar:nth-child(22) {
+    animation-duration: 15s, 874ms;
+    animation-timing-function: ease, cubic-bezier(0.01159944781822646,0.47484530102126055,0.45892906007715983,0.86857419401747);
+}
+.bar:nth-child(23) {
+    animation-duration: 15s, 609ms;
+    animation-timing-function: ease, cubic-bezier(0.7989756941012099,1.1744769971718494,0.4517855025874698,0.592484022186475);
+}
+.bar:nth-child(24) {
+    animation-duration: 15s, 857ms;
+    animation-timing-function: ease, cubic-bezier(0.3728550486972857,0.3948039014977973,0.6325888721558645,0.9594513504409986);
+}
+.bar:nth-child(25) {
+    animation-duration: 15s, 721ms;
+    animation-timing-function: ease, cubic-bezier(0.8865909767896099,0.09764805716498852,0.011999328030487588,1.9678649612115466);
+}
+.bar:nth-child(26) {
+    animation-duration: 15s, 869ms;
+    animation-timing-function: ease, cubic-bezier(0.20670035004753867,0.10049947243410078,0.18804343394060014,0.22279535858892996);
+}
+.bar:nth-child(27) {
+    animation-duration: 15s, 710ms;
+    animation-timing-function: ease, cubic-bezier(0.4048017367147599,0.7497410936604859,0.04461528337650831,1.5834526401685813);
+}
+.bar:nth-child(28) {
+    animation-duration: 15s, 1030ms;
+    animation-timing-function: ease, cubic-bezier(0.8917186646387164,0.191465062802646,0.4412093042590721,0.6668670049141123);
+}
+.bar:nth-child(29) {
+    animation-duration: 15s, 579ms;
+    animation-timing-function: ease, cubic-bezier(0.8096398574630768,1.6928462579979422,0.5288667460317263,0.6811250771336834);
+}
+.bar:nth-child(30) {
+    animation-duration: 15s, 1182ms;
+    animation-timing-function: ease, cubic-bezier(0.06543117923013708,0.4659318946814666,0.07515552886106541,0.4660408147993536);
+}
+.bar:nth-child(31) {
+    animation-duration: 15s, 877ms;
+    animation-timing-function: ease, cubic-bezier(0.9538674850969846,0.8827680394583245,0.7680570363273023,1.4127000203277187);
+}
+.bar:nth-child(32) {
+    animation-duration: 15s, 1404ms;
+    animation-timing-function: ease, cubic-bezier(0.9470925248401025,1.5357508524918775,0.07403653829907811,0.08472858622753084);
+}
+.bar:nth-child(33) {
+    animation-duration: 15s, 891ms;
+    animation-timing-function: ease, cubic-bezier(0.8153110698504917,1.9612851118137444,0.3476970108510499,0.007705861881140534);
+}
+.bar:nth-child(34) {
+    animation-duration: 15s, 501ms;
+    animation-timing-function: ease, cubic-bezier(0.7218657686749305,0.2937484419887212,0.0038241007678877894,1.1340613931051484);
+}
+.bar:nth-child(35) {
+    animation-duration: 15s, 890ms;
+    animation-timing-function: ease, cubic-bezier(0.5687639738100819,0.37480760317023365,0.8778955348659476,1.1432330142767133);
+}
+.bar:nth-child(36) {
+    animation-duration: 15s, 1038ms;
+    animation-timing-function: ease, cubic-bezier(0.6238505709476708,0.1480423494004488,0.46045354392615107,0.8752582540913287);
+}
+.bar:nth-child(37) {
+    animation-duration: 15s, 993ms;
+    animation-timing-function: ease, cubic-bezier(0.6908772572765592,0.5125482107922862,0.4963012924973706,0.5952757647269681);
+}
+.bar:nth-child(38) {
+    animation-duration: 15s, 1153ms;
+    animation-timing-function: ease, cubic-bezier(0.5782557455269959,1.9321116209169833,0.45208546883423467,1.88989224649617);
+}
+.bar:nth-child(39) {
+    animation-duration: 15s, 877ms;
+    animation-timing-function: ease, cubic-bezier(0.9783977733404275,1.0876492658478163,0.32994567132987085,0.9658445480414226);
+}
+.bar:nth-child(40) {
+    animation-duration: 15s, 1098ms;
+    animation-timing-function: ease, cubic-bezier(0.9221689727550559,1.0915118455350603,0.20477866034966752,1.449592824913371);
+}
+.bar:nth-child(41) {
+    animation-duration: 15s, 560ms;
+    animation-timing-function: ease, cubic-bezier(0.8052161050625876,1.642593389167901,0.8552197721317302,0.32125147332712944);
+}
+.bar:nth-child(42) {
+    animation-duration: 15s, 1126ms;
+    animation-timing-function: ease, cubic-bezier(0.9053070420395559,0.44794614919137044,0.011391830043999315,0.4228151890929178);
+}
+.bar:nth-child(43) {
+    animation-duration: 15s, 580ms;
+    animation-timing-function: ease, cubic-bezier(0.06448424954034672,1.2688570770287926,0.15677300446160372,1.2346246056713381);
+}
+.bar:nth-child(44) {
+    animation-duration: 15s, 703ms;
+    animation-timing-function: ease, cubic-bezier(0.9102188139950598,1.7171307582248378,0.29776577603893173,0.45130247968686193);
+}
+.bar:nth-child(45) {
+    animation-duration: 15s, 987ms;
+    animation-timing-function: ease, cubic-bezier(0.5886421819652953,1.0688267503634115,0.7053732023353052,0.07423651259509427);
+}
+.bar:nth-child(46) {
+    animation-duration: 15s, 832ms;
+    animation-timing-function: ease, cubic-bezier(0.9881398115778455,1.476801197262224,0.7778650919184336,0.23748563545093684);
+}
+.bar:nth-child(47) {
+    animation-duration: 15s, 1440ms;
+    animation-timing-function: ease, cubic-bezier(0.7194279716916546,0.6871831599992786,0.21372280822378006,0.7518465122485841);
+}
+.bar:nth-child(48) {
+    animation-duration: 15s, 823ms;
+    animation-timing-function: ease, cubic-bezier(0.4521771776095717,0.8658096130054704,0.13867718223047237,0.7739025179267809);
+}
+.bar:nth-child(49) {
+    animation-duration: 15s, 1082ms;
+    animation-timing-function: ease, cubic-bezier(0.8506565397399353,1.4365917237015602,0.1596564189117378,1.636105559923992);
+}
+.bar:nth-child(50) {
+    animation-duration: 15s, 775ms;
+    animation-timing-function: ease, cubic-bezier(0.658736767927076,0.5339386463046513,0.4525092389147962,1.4464995924119834);
+}
+.bar:nth-child(51) {
+    animation-duration: 15s, 644ms;
+    animation-timing-function: ease, cubic-bezier(0.2307235814706032,1.7743035717982358,0.9901766680412484,1.1189674016780096);
+}
+.bar:nth-child(52) {
+    animation-duration: 15s, 900ms;
+    animation-timing-function: ease, cubic-bezier(0.009855378897929437,1.2298560887618872,0.5231716038091422,0.6105400065160838);
+}
+.bar:nth-child(53) {
+    animation-duration: 15s, 580ms;
+    animation-timing-function: ease, cubic-bezier(0.006238086460305669,0.709506493204522,0.6062755398565711,0.47276580123910733);
+}
+.bar:nth-child(54) {
+    animation-duration: 15s, 522ms;
+    animation-timing-function: ease, cubic-bezier(0.3050817026847456,1.2117649841681088,0.7592308754829695,1.7892870170285862);
+}
+.bar:nth-child(55) {
+    animation-duration: 15s, 857ms;
+    animation-timing-function: ease, cubic-bezier(0.8360130666234465,1.794236697193077,0.7638764723868352,1.2811397546592536);
+}
+.bar:nth-child(56) {
+    animation-duration: 15s, 585ms;
+    animation-timing-function: ease, cubic-bezier(0.5523111917202055,1.1691250141654281,0.6699319900590344,1.5568165091923651);
+}
+.bar:nth-child(57) {
+    animation-duration: 15s, 1371ms;
+    animation-timing-function: ease, cubic-bezier(0.9745528062184894,0.9901359541856564,0.7182997345384452,0.46314073934848743);
+}
+.bar:nth-child(58) {
+    animation-duration: 15s, 1040ms;
+    animation-timing-function: ease, cubic-bezier(0.11767973691997569,0.1935313018489889,0.1877781093993659,0.7110421653544221);
+}
+
+
+@keyframes anima {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes sound {
+    0% {
+        height: 3px;
+        opacity: .35;
+    }
+    100% {
+        height: 15px;
+        opacity: 0.95
+    }
 }

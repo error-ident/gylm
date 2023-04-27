@@ -304,10 +304,6 @@ div{
     animation-duration: 15s, 1371ms;
     animation-timing-function: ease, cubic-bezier(0.9745528062184894,0.9901359541856564,0.7182997345384452,0.46314073934848743);
 }
-.bar:nth-child(58) {
-    animation-duration: 15s, 1040ms;
-    animation-timing-function: ease, cubic-bezier(0.11767973691997569,0.1935313018489889,0.1877781093993659,0.7110421653544221);
-}
 
 
 @keyframes anima {
